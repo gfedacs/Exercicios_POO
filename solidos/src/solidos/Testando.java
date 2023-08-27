@@ -9,6 +9,7 @@ public class Testando {
 		System.out.println(r1.calcualarArea());
 		
 		System.out.println(r1);
+		System.out.println("ko");
 	}
 
 }
