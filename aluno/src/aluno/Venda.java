@@ -64,7 +64,7 @@ public class Venda {
 	
 	public void decrementa() {
 		produto.setEstoque(produto.getEstoque()- this.getQuantidade());
-		
+		// Não precisa colocar o getQuantidade, só quantidade, pq está na própria classe.
 	}
 
 	@Override

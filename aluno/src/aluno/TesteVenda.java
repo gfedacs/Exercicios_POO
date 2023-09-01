@@ -14,8 +14,7 @@ public class TesteVenda {
 		System.out.println(milho.getEstoque());
 		venda1.decrementa();
 		System.out.println(milho.getEstoque());
-		System.out.println("olá");
-		System.out.println("Testando");
+		
 		
 		
 		System.out.println(venda1.getValor());
