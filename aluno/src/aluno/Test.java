@@ -7,6 +7,7 @@ public class Test {
 		System.out.println(a1.calcularMedia());
 		a1.darPonto();
 		System.out.println(a1);
+		System.out.println("Olá");
 
 	}
 
