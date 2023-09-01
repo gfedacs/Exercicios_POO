@@ -17,6 +17,7 @@ public class teste {
 		ContaBancaria c3 = c2.clone();
 		
 		System.out.println(c3.getSaldo());
+		System.out.println("Chegou aqui");
 		
 
 	}
