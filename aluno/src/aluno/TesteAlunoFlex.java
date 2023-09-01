@@ -11,8 +11,9 @@ public class TesteAlunoFlex {
 		
 		System.out.println(a.getMedia());
 		System.out.println(a.situacao());
-		
+		System.out.println(a);
 	
 	}
 
 }
+
