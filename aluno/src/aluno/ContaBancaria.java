@@ -1,7 +1,5 @@
 package aluno;
 
-import aluno.ContaBancaria;
-
 public class ContaBancaria {
 	public ContaBancaria(String numero, String cpf) {
 		super();
@@ -14,18 +12,37 @@ public class ContaBancaria {
 	private double saldo;
 
 	
-	public void creditar(double valor) {
-		saldo = saldo + valor;
+	public void creditar(double valor) throws Exception{
+		if (valor > 10)
+			saldo = saldo + valor;
+		else {
+			throw new Exception ("Só pode depositar quantias acima de 10 reais");
+		}
 	}
 	
-	public void debitar (double valor) {
-		saldo = saldo - valor;
-	}
-	
-	public void transferir(double valor,ContaBancaria destino) {
+	public void debitar (double valor) throws Exception {
 		
+		if (valor > saldo)
+		throw new Exception ("Quantia inválida");
+		else
+			saldo = saldo - valor;
+	}
+	
+	public void transferir(double valor,ContaBancaria destino)throws Exception {
+		
+	try {
 		this.debitar(valor);
+	}
+	catch(Exception e){
+		System.out.println("Erro na transferência: " + e.getMessage());
+		
+	}
+	try {
 		destino.creditar(valor);
+	}
+	catch(Exception f) {
+		System.out.println("Erro na transferência: " + f.getMessage());
+	}
 	}
 
 	public String getNumero() {

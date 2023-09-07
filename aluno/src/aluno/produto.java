@@ -34,5 +34,8 @@ public class produto {
 	private String nome;
 	private int estoque;
 	private double preco;
+	
+	
+
 
 }
